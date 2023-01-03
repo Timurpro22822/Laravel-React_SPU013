@@ -9,6 +9,7 @@ class Product extends Model
 {
     use HasFactory;
     protected $fillable = [
+        // Поля що заповняються
         'name', 'detail'
     ];
 }

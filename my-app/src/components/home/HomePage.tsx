@@ -5,6 +5,7 @@ import { IProductItem } from "./types";
 const HomePage = () => {
     const [list, setList] = useState<Array<IProductItem>>([]);
 
+    // useEffect викликається 1 раз
     useEffect(() => {
         http.get<Array<IProductItem>>("/api/products")
         .then((resp) => {
@@ -21,6 +22,7 @@ const HomePage = () => {
     ));
     return (
         <>
+        {/* заповнення данними з http://laravel.spu013.com/api/products */}
         <h1 className="text-center">Home Page</h1>
         <table className="table">
             <thead>

@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
+            // Добавлення полів в базу данних
             $table->id();
             $table->string('name');
             $table->text('detail');

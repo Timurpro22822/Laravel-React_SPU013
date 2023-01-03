@@ -15,8 +15,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $prodcuts = Product::all();
-        return response()->json($prodcuts,  200,
+        // Get all products
+        $products = Product::all();
+        return response()->json($products,  200,
             ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'],
             JSON_UNESCAPED_UNICODE);
     }
@@ -28,7 +29,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -84,6 +85,6 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        //$products = Product::destroy();
     }
 }
