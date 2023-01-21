@@ -5,6 +5,11 @@ export interface IProductItem {
     detail: string
 }
 
+export interface ISearchProduct {
+    name?: string,
+    page?: number|string|null;
+}
+
 export interface IProductResponse {
     data: Array<IProductItem>,
     current_page: number,
