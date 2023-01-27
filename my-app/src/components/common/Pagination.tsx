@@ -20,6 +20,7 @@ const Pagination: FC<PaginationProps> = ({
     buttons.push(i);
   }
 
+  // Робимо перевірки пагінації з ...
    const pagination = buttons.map((page) => {
     if (current_page <= 5) {
       if (page <= 7 || page == count_page) {
