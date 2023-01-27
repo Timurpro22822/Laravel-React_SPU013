@@ -13,6 +13,7 @@ const HomePage = () => {
 
   useEffect(() => {
     const page = searchParams.get("page")?? 1;
+    // витягуємо дані з апішки
     http.get<IProductResponse>("/api/products?page="+page).then((resp) => {
       console.log("List product server", resp);
       const {data} = resp;
